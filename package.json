@@ -1,0 +1,49 @@
+{
+  "name": "law15-static",
+  "version": "0.0.1",
+  "description": "A static assets repository for the {LAW 15} server",
+  "main": "",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vrtxf/L15-mobius-assets.git"
+  },
+  "author": {
+    "name": "TED Vortex",
+    "email": "ted.vortex@gmail.com",
+    "url": "https://tedvortex.xyz"
+  },
+  "contributors": [
+    {
+      "name": "Ambrosio Lombardi",
+      "email": "MorganRequiem@inbox.lv"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/vrtxf/L15-mobius-assets/issues"
+  },
+  "homepage": "https://github.com/vrtxf/L15-mobius-assets#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "airbnb"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "never"
+      ]
+    }
+  }
+}
