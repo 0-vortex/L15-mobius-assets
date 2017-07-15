@@ -26,24 +26,37 @@
     "url": "https://github.com/vrtxf/L15-mobius-assets/issues"
   },
   "homepage": "https://github.com/vrtxf/L15-mobius-assets#readme",
+  "dependencies": {
+    "mobius-final-fantasy-fusion-calculator": "github:zekareisoujin/MFFFusionCalc"
+  },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^4.0.0",
+    "gulp-exclude-gitignore": "^1.1.1",
+    "gulp-gh-pages": "^0.5.4",
+    "mkdirp": "^0.5.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "airbnb"
-    ],
-    "rules": {
-      "comma-dangle": [
-        "error",
-        "never"
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current",
+            "debug": true
+          }
+        }
       ]
-    }
+    ]
   }
 }

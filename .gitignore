@@ -213,7 +213,7 @@ $RECYCLE.BIN/
 # Project specific
 .publish/
 .nyc_output/
-lib/
+dist/
 config/local*
 .*.dockerfile
 .dockerignore
