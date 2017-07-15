@@ -1,9 +1,12 @@
+import path from 'path';
 import del from 'del';
 import mkdirp from 'mkdirp';
 import gulp from 'gulp';
 import ghPages from 'gulp-gh-pages';
 import excludeGitignore from 'gulp-exclude-gitignore';
 import eslint from 'gulp-eslint';
+import nsp from 'gulp-nsp';
+import snyk from 'gulp-snyk';
 
 // config
 const paths = {
@@ -43,6 +46,13 @@ gulp.task('dist:static', ['dist:setup'], () => gulp.src(`${paths.static}/**/*`)
 gulp.task('dist', ['dist:static', 'dist:calculator'], () => gulp.src(`${paths.dist}/**/*`)
   .pipe(ghPages()));
 
+gulp.task('nsp', cb => nsp({ package: path.resolve('package.json') }, cb));
+
+gulp.task('snyk', () => snyk({
+  command: 'test',
+  debug: true
+}));
+
 gulp.task('lint', () => gulp.src([
   '**/*.js',
   '!node_modules/**'
@@ -56,4 +66,5 @@ gulp.task('lint', () => gulp.src([
   .pipe(gulp.dest('.'))
 );
 
+gulp.task('test:install', ['nsp', 'snyk']);
 gulp.task('default', ['lint']);

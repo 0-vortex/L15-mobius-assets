@@ -4,7 +4,8 @@
   "description": "A static assets repository for the {LAW 15} server",
   "main": "",
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "build": "gulp test:install"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,10 @@
     "gulp-eslint": "^4.0.0",
     "gulp-exclude-gitignore": "^1.1.1",
     "gulp-gh-pages": "^0.5.4",
-    "mkdirp": "^0.5.1"
+    "gulp-nsp": "^2.4.2",
+    "gulp-snyk": "0.0.3",
+    "mkdirp": "^0.5.1",
+    "nsp": "^2.6.3"
   },
   "babel": {
     "presets": [
